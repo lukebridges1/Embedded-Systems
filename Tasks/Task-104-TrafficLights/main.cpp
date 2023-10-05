@@ -25,6 +25,21 @@ int main()
     lcd.puts("Green");    
     wait_us(1000000);
 
+    red = 1;
+    lcd.cls();
+    lcd.puts("RED");
+    wait_us(1000000);
+
+    amber = 1;
+    lcd.cls();
+    lcd.puts("Amber");
+    wait_us(1000000);
+
+    green = 1;
+    lcd.cls();
+    lcd.puts("Green");    
+    wait_us(1000000);
+
     lcd.cls();
     lcd.puts("TASK-104");
 
