@@ -53,12 +53,12 @@ void dot()
         // ON
         greenLED = 1;           // LED ON
         buzz.playTone("C");     // Play tone
-        wait_us(150000);        // Wait 150ms
+        wait_us(100000);        // Wait 150ms
 
         // OFF
         greenLED = 0;           // LED OFF
         buzz.rest();            // Stop tone
-        wait_us(150000);        // Wait 150ms
+        wait_us(100000);        // Wait 150ms
 }
 
 // Send one dash symbol
@@ -69,24 +69,24 @@ void dash()
         // ON
         greenLED = 1;           // LED ON
         buzz.playTone("C");     // Play tone
-        wait_us(450000);        // Wait 450ms
+        wait_us(300000);        // Wait 450ms
 
         // OFF
         greenLED = 0;           // LED OFF
         buzz.rest();            // Stop tone 
-        wait_us(150000);        // Wait 150ms
+        wait_us(100000);        // Wait 150ms
 }
 
 // Send letterspace 450 ms minus the 150 ms from the last symbol = 300 ms
 void letterSpace()
 {
-    wait_us(300000); // 300 ms
+    wait_us(200000); // 300 ms
 }
 
 // Send wordspace 900 ms - the 150 ms from last symbol = 750 ms
 void wordSpace()
 {
-    wait_us(750000); // 750 ms
+    wait_us(500000); // 750 ms
 }
 
 // Send the latter 'S' dot dot dot followed by the wordspace
