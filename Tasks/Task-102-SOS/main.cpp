@@ -6,6 +6,7 @@ using namespace uop_msb;
 DigitalOut greenLED(TRAF_GRN1_PIN);
 Buzzer buzz;
 Buttons buttons;
+LCD_16X2_DISPLAY lcd;
 
 // TIP: (I suggest you read this!)
 //
@@ -20,20 +21,92 @@ int main()
     //Repeat everything "forever" (until the power is removed or the chip is reset)
     while (true)
     {
+        //3 Dots
         //On for 500ms
+        lcd.cls();
+        
+        lcd.printf("3 Dots");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf("...");
+
         greenLED = 1;
         buzz.playTone("C");
-        wait_us(WAIT_TIME_MS * 70);  //500ms
+        wait_us(WAIT_TIME_MS * 150);  //500ms
 
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
 
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+     
+     
+        //3 Dashes
         //Off for 500ms
+        lcd.cls();
+
+        lcd.printf("3 Dashes");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf("---");
+
         greenLED = 0;
         buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
-        wait_us(WAIT_TIME_MS * 120);  //500ms
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        greenLED = 0;
+        buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        greenLED = 0;
+        buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        //3 Dots
+        //On for 500ms
+        lcd.cls();
+
+        lcd.printf("3 Dots");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf("...");
+
+        greenLED = 1;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);  //500ms
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 500);
+
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+
+        buzz.rest();
 
         //Pause
         buzz.rest();
-        wait_us(WAIT_TIME_MS * 60);
+        wait_us(WAIT_TIME_MS * 1500);
 
     }
 }
