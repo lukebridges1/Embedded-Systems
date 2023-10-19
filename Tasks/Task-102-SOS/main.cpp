@@ -21,13 +21,6 @@ int main()
     //Repeat everything "forever" (until the power is removed or the chip is reset)
     while (true)
     {
-        //3 Dots
-        //On for 500ms
-        lcd.cls();
-        
-        lcd.printf("3 Dots");
-        lcd.locate(1, 0);   //Row 1, Col 0
-        lcd.printf("...");
 
         greenLED = 1;
         buzz.playTone("C");
@@ -48,15 +41,6 @@ int main()
         buzz.rest();
         wait_us(WAIT_TIME_MS * 500);
      
-     
-        //3 Dashes
-        //Off for 500ms
-        lcd.cls();
-
-        lcd.printf("3 Dashes");
-        lcd.locate(1, 0);   //Row 1, Col 0
-        lcd.printf("---");
-
         greenLED = 0;
         buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
         wait_us(WAIT_TIME_MS * 450);  //500ms
@@ -77,14 +61,6 @@ int main()
 
         buzz.rest();
         wait_us(WAIT_TIME_MS * 500);
-
-        //3 Dots
-        //On for 500ms
-        lcd.cls();
-
-        lcd.printf("3 Dots");
-        lcd.locate(1, 0);   //Row 1, Col 0
-        lcd.printf("...");
 
         greenLED = 1;
         buzz.playTone("C");
