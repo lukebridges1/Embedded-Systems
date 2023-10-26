@@ -39,7 +39,25 @@ int main()
     amber = 1;
     lcd.cls();
     lcd.puts("Amber");
-    wait_us(2000000);
+    wait_us(200000);
+    
+    amber = 0;
+    wait_us(800000);
+
+    amber = 1;
+    wait_us(800000);
+
+    amber = 0;
+    wait_us(800000);
+
+    amber = 1;
+    wait_us(800000);
+
+    amber = 0;
+    wait_us(800000);
+
+    amber = 1;
+    wait_us(800000);
 
     amber=0;
     wait_us(2000);
