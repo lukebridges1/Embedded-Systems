@@ -36,6 +36,27 @@ int main()
     character = 'A';
     printf("The character %c has the ASCII code %d\n", character, character);
 
+    char character1;
+    character1 = 'Z';
+    printf("The character %c has the ASCII code %d\n", character1, character1);
+
+    char character2;
+    character2 = 'a';
+    printf("The character %c has the ASCII code %d\n", character2, character2);
+
+    char character3;
+    character3 = 'z';
+    printf("The character %c has the ASCII code %d\n", character3, character3);
+
+    char character4;
+    character4 = '0';
+    printf("The character %c has the ASCII code %d\n", character4, character4);
+
+    char character5;
+    character5 = '9';
+    printf("The character %c has the ASCII code %d\n", character5, character5);
+
+
     // Short
     short shortCount = 32766;
     printf("The value of shortCount is %hd\n", shortCount);
