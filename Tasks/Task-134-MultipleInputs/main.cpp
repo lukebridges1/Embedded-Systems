@@ -25,11 +25,14 @@ int main()
     DigitalIn& buttonD = buttons[3];
 
     //Configure switches
+    buttonA.mode(PullDown);
+    buttonB.mode(PullDown);
     buttonC.mode(PullDown);
     buttonD.mode(PullDown);
 
     //Turn ON the 7-segment display
     disp.enable(true);
+    disp = count;
 
 
     // ****************************************
@@ -40,7 +43,8 @@ int main()
     while (true) {
 
         //Update display
-        disp = count;
+        bool A = buttonA.read();
+        bool B = 
         
         //Wait for button A
         while (buttonA == 0) {
