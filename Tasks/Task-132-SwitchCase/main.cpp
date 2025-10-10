@@ -32,6 +32,15 @@ int main()
         int btn = buttons;     //Local to the while-loop  
 //binary because of busIn allowing the 4 switch states to be read as binary bit3=D, bit2=C, bit1=B, bit0=A
 
+        if (btn & 0b1000) {
+            //if D is pressed (regardless of others)
+          redLED = !redLED;
+          yellowLED = !yellowLED;
+          greenLED = !greenLED;  
+        }
+
+
+        else{
         switch (btn) {
             case 0b0001:    //Only Button A 
             
@@ -54,6 +63,7 @@ int main()
             greenLED = !greenLED;
             break;
 
+            
             default:
             //All others
             greenLED = 1;
@@ -62,11 +72,10 @@ int main()
             break;
 
         }
-
+        }
         // Slow it down a bit (and debounce the switches)
         wait_us(100000);  
     }
 }
-
 
 
