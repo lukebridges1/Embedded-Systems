@@ -19,5 +19,5 @@ int main()
        leds = i;
        wait_us(500000);
     }
-}
+  }
 }
