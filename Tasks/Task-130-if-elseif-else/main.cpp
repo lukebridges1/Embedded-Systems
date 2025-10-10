@@ -37,7 +37,7 @@ int main()
 
         else if (btnB == 1) {
                 yellowLED = !yellowLED; //Toggle yellow LED for button B
-                count = count - ( (count>0) ? 1 : 0);                //Decrease count
+                count = count - ( (count>1) ? 1 : 0);                //Decrease count
                 disp = count;           //update display
         }
 

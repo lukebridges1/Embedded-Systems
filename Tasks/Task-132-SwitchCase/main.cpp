@@ -15,6 +15,8 @@ int main()
     int count = 0;
     
     //Configure switches
+    buttons[0].mode(PullDown);
+    buttons[1].mode(PullDown);
     buttons[2].mode(PullDown);
     buttons[3].mode(PullDown);
 
@@ -28,34 +30,35 @@ int main()
         
         //Read button without blocking
         int btn = buttons;     //Local to the while-loop  
+//binary because of busIn allowing the 4 switch states to be read as binary bit3=D, bit2=C, bit1=B, bit0=A
 
         switch (btn) {
-            case 0:
-            //Nothing pressed
+            case 0b0001:    //Only Button A 
+            
             greenLED = 0;
             yellowLED = 0;
             redLED = !redLED;
             break;
 
-            case 1:
-            //Button A only
-            redLED = 0;
-            yellowLED = 0;            
-            greenLED = !greenLED;
-            break;
-
-            case 3: 
-            //Button A and B
+            case 0b0010:    //Only button B
+            
             redLED = 0;
             yellowLED = !yellowLED;            
             greenLED = 0;
             break;
 
+            case 0b0100:    //Only button C  
+        
+            redLED = 0;
+            yellowLED = 0;            
+            greenLED = !greenLED;
+            break;
+
             default:
             //All others
-            greenLED = 0;
-            yellowLED = 0;
-            redLED = 0;
+            greenLED = 1;
+            yellowLED = 1;
+            redLED = 1;
             break;
 
         }
