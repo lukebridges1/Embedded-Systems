@@ -19,13 +19,13 @@ int main()
     //Note the logic
     while (true) {
         grnLED = 1;
-        redLED = 1;
+        redLED = 0;
 
         wait_us(1000000);
 
         grnLED = 0;
-        redLED = 0;
-        
+        redLED = 1;
+
         wait_us(1000000);
 
         
