@@ -40,6 +40,20 @@ int main()
         } else {
             ledYel = 0;
         }
+
+        if (SW4 == 1) {
+            ledGrn = 1;
+        } else {
+            ledGrn = 0;
+        }
+        
+        if (SW5.read() == 1) {
+            ledRed && ledGrn == 1;
+        } else {
+            ledRed && ledGrn == 0;
+        }
+        
     }
+
 }
 
