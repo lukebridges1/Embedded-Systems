@@ -36,16 +36,25 @@ void display_top() {
 }
 
 int main(){
-    printf(Stack Test Start...\n);       //Push first value
-                //Push second value 
+    printf(Stack Test Start...\n);
+       //Push first value
+    push(10);   
+       //Push second value
+    push(20); 
 
     display top();  //Display top value after pushing
-                    //Pop the top value 
-    display top();  //Display new top value after popping
+                    
+    //Pop the top value
+    int popped = pop();
+    printf("Popped value = %d\n, popped");
+
+    display_top(); 
+    //Display new top value after popping
 
     while(1){
         led = !led; //Blink LED
-        wait_us(0.5) //wait half a second
+        ThisThread::sleep_for(500ms);
+        //wait half a second
     }
 
 
