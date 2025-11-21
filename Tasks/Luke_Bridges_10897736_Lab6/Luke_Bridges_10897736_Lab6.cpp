@@ -36,19 +36,20 @@ void display_top() {
 }
 
 int main(){
-    printf(Stack Test Start...\n);
+    printf("Stack Test Start...\n");
        //Push first value
     push(10);   
        //Push second value
     push(20); 
 
-    display top();  //Display top value after pushing
+    display_top();
+    pop();
+    display_top();  //Display top value after pushing
                     
     //Pop the top value
-    int popped = pop();
-    printf("Popped value = %d\n, popped");
+    
 
-    display_top(); 
+    
     //Display new top value after popping
 
     while(1){
