@@ -53,7 +53,7 @@ int main(){
 
     while(1){
         led = !led; //Blink LED
-        ThisThread::sleep_for(500ms);
+        wait_us(500000);
         //wait half a second
     }
 
